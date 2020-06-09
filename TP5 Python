@@ -1,6 +1,6 @@
-entradas=input("Indique la cantidad de numeros que desee comprobar(entradas)")
-z=0
-while z!=entradas:
+entradas=input("Introduzca la cantidad de numeros para comprobar(entradas)")
+x=0
+while x!=entradas:
     numero= input("Elige un número de cuatro dígitos que tenga al menos dos diferentes (es válido colocar el dígito 0 al principio, por lo que el número 0009 es válido)")
     if numero==6174:
         print("numero de iteracion: 0")
@@ -8,20 +8,20 @@ while z!=entradas:
     num=int(numero)
     listaminmax=sorted(numero)
     numR=0
-    print("el numero que ingreso es: ",numero)
-    print("Realizando la constante de Kaprekar")
-    for z in range(99):
+    print("el numero ingresado es: ",numero)
+    print("La constante de Kaprekar")
+    for x in range(99):
         
         numero="{:04d}".format(num)
-        numeroGrande="".join(sorted(numero,reverse=True))
-        numeroChico="".join(sorted(numero))
-        num=int(numeroGrande)-int(numeroChico)
+        numeroMayor="".join(sorted(numero,reverse=True))
+        numeroMenor="".join(sorted(numero))
+        num=int(numeroMayor)-int(numeroMenor)
         
-        #print(numeroGrande,"-",numeroChico,"= ",num)
+        #print(numeroMayor,"-",numeroMenor,"= ",num)
         #print("-----------------------------------")
         if num==numR:
-            print("numero de iteracion: "+"{:02}".format(z+1))     
+            print("numero de iteracion: "+"{:02}".format(x+1))     
             break
         numR=num
-    z=z+1
+    x=x+1
                          
